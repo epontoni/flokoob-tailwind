@@ -1,0 +1,41 @@
+.quote {
+    background-color: gainsboro;
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    border-radius: .5rem;
+    position: relative;
+    animation: fadeInOut 5s ease-in-out;
+}
+
+.quote--author {
+    position: absolute;
+    right: 0;
+    bottom: -1.5rem;
+}
+
+.quote::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-image: url('../../assets/quote.png');
+    background-size: 50px 50px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
